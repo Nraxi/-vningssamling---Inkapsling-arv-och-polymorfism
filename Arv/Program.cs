@@ -22,7 +22,7 @@ namespace Arv
             List<Animal> animals = new List<Animal>();
             animals.Add(new Horse("Bella", 500, 7));
             animals.Add(new Dog("Max", 25, 3));
-            animals.Add(new Dog("mimmi", 35, 5));
+            //animals.Add(new Dog("mimmi", 35, 5));
             //animals.Add(new Hedgehog("Sonic", 1, 2));
             //animals.Add(new Wolf("Alpha", 70, 5, "Grey"));
             //animals.Add(new Pelican("Peli", 10, 1, 3));
@@ -68,14 +68,15 @@ namespace Arv
                 
             }
             Console.WriteLine("\n");
-            foreach (var animal in animals)
+            foreach (var animal in animals) //OBS iomed att vi renderar ifrån animals så om vi lägger in fler hunda kommer vi få fler svar. 
             {
-                if (animal is Dog)
+                if (animal is Dog) // vi kontorllerar ifall det aktuella djuret är en instans av klassen dog
                 {
                     Dog dog = (Dog)animal; // Gör en typkonvertering till Dog
                     Console.WriteLine(dog.NewStringClass());
                 }
             }
+            // 16/17. Nej, Anledningen till det är att NewStringClass metoden är en metod spcefikt för Dog klassen och inte från basklassen animal. Därav varför jag måste typ konverera den för att den ska leta i rätt fält. 
         }
     }
 }
