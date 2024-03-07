@@ -1,4 +1,6 @@
-﻿namespace Övningssamling___Inkapsling__arv_och_polymorfism
+﻿using System.Drawing;
+
+namespace Övningssamling___Inkapsling__arv_och_polymorfism
 {
     public abstract class Animal
     {
@@ -13,10 +15,10 @@
             Weight = weight;
             Age = age;
         }
-        public override string ToString()
-        {
-            return $"{Name},{Weight},{Age}";
-        }
+        //public override string ToString()
+        //{
+        //    return $"{Name},{Weight},{Age}";
+        //}
     }
     public class Horse : Animal
     {  
@@ -84,9 +86,53 @@
             Console.WriteLine("Wolf sounds: ahooooo!");
         }
 
-         public override string ToString()
+        // public override string ToString()
+        //{
+        //    return $"{Name},{Weight},{Age},{Color}";
+        //}
+    }
+
+    public class Pelican : Bird
+    {
+        public int FeetSize { get; set; }
+        public Pelican(string name, double weight, int age, int feetsize) : base(name, weight, age) 
         {
-            return $"{Color},{Name},{Weight},{Age}";
+            FeetSize = feetsize;
+        }
+        public override void DoSound()
+        {
+            Console.WriteLine("Pelican sounds: Squawk!");
         }
     }
+
+    public class Flamingo : Bird
+    {
+        public string Color { get; set; }
+        public Flamingo(string name, double weight, int age, string color = "pink") : base(name, weight, age)
+        {
+            Color = color;
+        }
+        public override void DoSound()
+        {
+            Console.WriteLine("Flamingo sounds: Squawk!");
+        }
+    }
+
+    public class Swan : Bird
+    {
+        public bool Arewhite { get; set; }
+        public Swan(string name, double weight, int age, bool arewhite = true) : base(name, weight, age)
+        {
+            Arewhite = arewhite;
+        }
+        public override void DoSound()
+        {
+            Console.WriteLine("Swan sounds: Squawk!");
+        }
+    }
+    public interface IPerson
+    {
+        void Talk();
+    }
+    
 }
