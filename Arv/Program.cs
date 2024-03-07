@@ -3,6 +3,7 @@ using System.Drawing;
 
 namespace Arv
 {
+    //I denna fil ligger även 3.4) Mer polymorfism
     internal class Program
     {
         static void Main(string[] args)
