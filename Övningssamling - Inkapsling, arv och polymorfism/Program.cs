@@ -1,40 +1,29 @@
-﻿namespace Övningssamling___Inkapsling__arv_och_polymorfism
+﻿namespace Polymorfism
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //try
-            //{
-            //    Create a Mandalorian Bounty Hunter
-            //    Person person = new Person(10, "Jango", "Fett");
-            //    person.Height = 183;
-            //    person.Weight = 79;
-
-            //    Console.WriteLine("Person created successfully.");
-            //    Console.WriteLine(person); 
-            //}
-            //catch (ArgumentException ex)
-            //{
-            //    Console.WriteLine($"Error: {ex.Message}");
-            //}
-
-            try
+            List<UserError> errors = new List<UserError>
             {
-                PersonHandler handler = new PersonHandler();
+                new NumericInputError(), new TextInputError()
+            };
 
-                //Create a  JEDI
-                Person person = handler.CreatePerson(21, "Anakin", "Skywalker", 188, 84);
+            List<UserError> Starwars = new List<UserError>
+            {
+                new Mandalorians(),
+                new Jedi(),
+                new BountyHunter()
+            };
 
-                //  handler.SetAge(person, 25);
-
-                Console.WriteLine("Jedi was created:");
-                Console.WriteLine($"Name: {person.FName} {person.LName}");
-                Console.WriteLine($"Age: {person.Age}");
-                Console.WriteLine($"Height: {person.Height} cm");
-                Console.WriteLine($"Weight: {person.Weight} kg");
+            foreach (var error in errors)
+            {
+                Console.WriteLine(error.UEMessage());
             }
-            catch (ArgumentException ex) { Console.WriteLine($"Error: {ex.Message}"); }
+            foreach (var e in Starwars)
+            {
+                Console.WriteLine(e.UEMessage());
+            }
         }
     }
 }

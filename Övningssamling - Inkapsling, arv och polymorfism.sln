@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Övningssamling - Inkapsling, arv och polymorfism", "Övningssamling - Inkapsling, arv och polymorfism\Övningssamling - Inkapsling, arv och polymorfism.csproj", "{A8914698-F933-4325-B02F-03F5D38E347F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorfism", "Övningssamling - Inkapsling, arv och polymorfism\Polymorfism.csproj", "{A8914698-F933-4325-B02F-03F5D38E347F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inkapsling", "Inkapsling\Inkapsling.csproj", "{3F0A4C0B-74FD-41AA-8DA3-3EFBAECCD83B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arv", "Arv\Arv.csproj", "{50607C35-7E89-48FF-BD81-F7745E14E7D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A8914698-F933-4325-B02F-03F5D38E347F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8914698-F933-4325-B02F-03F5D38E347F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8914698-F933-4325-B02F-03F5D38E347F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F0A4C0B-74FD-41AA-8DA3-3EFBAECCD83B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0A4C0B-74FD-41AA-8DA3-3EFBAECCD83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0A4C0B-74FD-41AA-8DA3-3EFBAECCD83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0A4C0B-74FD-41AA-8DA3-3EFBAECCD83B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50607C35-7E89-48FF-BD81-F7745E14E7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50607C35-7E89-48FF-BD81-F7745E14E7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50607C35-7E89-48FF-BD81-F7745E14E7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50607C35-7E89-48FF-BD81-F7745E14E7D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

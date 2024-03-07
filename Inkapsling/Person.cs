@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
-namespace Övningssamling___Inkapsling__arv_och_polymorfism
+﻿namespace Inkapsling
 {
-    class Person
+    //Inkapsling
+    public class Person
     {
         private int age;
         private string? fName;
         private string? lName;
-        private double height;
-        private double weight;
+        //private double height;
+        //private double weight;
 
 
 
@@ -83,19 +77,6 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
             return $"Age: {Age}, First Name: {FName}, Last Name: {LName}, Height: {Height} cm, Weight: {Weight} kg";
         }
     }
-    class PersonHandler
-    {
-        public void SetAge(Person pers, int age)
-        {
-            pers.Age = age;
-        }
 
-        public Person CreatePerson(int age, string fName, string lName, double height, double weight)
-        {
-            Person person = new Person(age,fName,lName);
-            person.Height = height;
-            person.Weight = weight;
-            return person ;
-        }
-    }
+
 }
