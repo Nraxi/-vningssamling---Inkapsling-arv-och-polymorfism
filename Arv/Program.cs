@@ -34,7 +34,7 @@ namespace Arv
             foreach (var animal in animals)
             {
                
-                animal.DoSound(); // Anropa djurets ljud
+               
                 if (animal is IPerson) // Kontrollera om djuret är också en person
                 {
                     IPerson personAnimal = (IPerson)animal; // Typomvandling till IPerson
@@ -44,6 +44,7 @@ namespace Arv
                 Console.WriteLine($"Animal name: {animal.Name}");
                 Console.WriteLine($"Animal weight: {animal.Weight}");
                 Console.WriteLine($"Animal age: {animal.Age}");
+                animal.DoSound(); // Anropa djurets ljud
             }
             // Skapa en lista för hundar
             List<Dog> Dogs = new List<Dog>();
