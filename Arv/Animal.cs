@@ -19,6 +19,11 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         //{
         //    return $"{Name},{Weight},{Age}";
         //}
+
+        public virtual string Stats()
+        {
+            return $"Name: {Name}, Weight: {Weight}, Age: {Age}";
+        }
     }
     public class Horse : Animal
     {  
@@ -28,6 +33,10 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         public override void DoSound()
         {
             Console.WriteLine("Horse sounds: Neigh!");
+        }
+        public override string Stats()
+        {
+            return $"{base.Stats()}, Smart: {Smart}";
         }
     }
     public class Dog : Animal
@@ -39,6 +48,15 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         {
             Console.WriteLine("Dog sounds: VOFF!");
         }
+        public override string Stats()
+        {
+            return $"{base.Stats()}, Can Bark: {CanBark}";
+        }
+
+        public string NewStringClass()
+        {
+            return "THElluuu.";
+        }
     }
     public class Hedgehog : Animal
     {
@@ -49,7 +67,11 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         }
         public override void DoSound()
         {
-            Console.WriteLine("Hedgehog sounds: ihhh!");
+            Console.WriteLine("Hedgehog sounds: ihhhhhhhhh!");
+        }
+        public override string Stats()
+        {
+            return $"{base.Stats()}, Have spikes: {HaveSpikes}";
         }
     }
     public class Worm : Animal
@@ -60,6 +82,10 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         public override void DoSound()
         {
             Console.WriteLine("Worm sounds: sllr!");
+        }
+        public override string Stats()
+        {
+            return $"{base.Stats()}, worm have posion: {posion}";
         }
     }
     public class Bird : Animal
@@ -72,6 +98,11 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         public override void DoSound()
         {
             Console.WriteLine("Bird sounds: kvack!");
+        }
+
+        public override string Stats()
+        {
+            return $"{base.Stats()}, Can bird fly?: {CanFly}";
         }
     }
     public class Wolf : Animal
@@ -86,10 +117,11 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
             Console.WriteLine("Wolf sounds: ahooooo!");
         }
 
-        // public override string ToString()
-        //{
-        //    return $"{Name},{Weight},{Age},{Color}";
-        //}
+     
+        public override string Stats()
+        {
+            return $"{base.Stats()}, The wolf have: {Color}";
+        }
     }
 
     public class Pelican : Bird
@@ -102,6 +134,10 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         public override void DoSound()
         {
             Console.WriteLine("Pelican sounds: Squawk!");
+        }
+        public override string Stats()
+        {
+            return $"{base.Stats()}, The Pelican have: {FeetSize} in feet";
         }
     }
 
@@ -116,6 +152,10 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         {
             Console.WriteLine("Flamingo sounds: Squawk!");
         }
+        public override string Stats()
+        {
+            return $"{base.Stats()}, The Flamingo have: {Color} feathers";
+        }
     }
 
     public class Swan : Bird
@@ -129,10 +169,26 @@ namespace Övningssamling___Inkapsling__arv_och_polymorfism
         {
             Console.WriteLine("Swan sounds: Squawk!");
         }
+        public override string Stats()
+        {
+            return $"{base.Stats()}, are Swans white?: {Arewhite} ";
+        }
     }
     public interface IPerson
     {
         void Talk();
     }
-    
+    public class Wolfman : Wolf, IPerson
+    {
+        public Wolfman(string name, double weight, int age, string color = "Brown Red") : base(name, weight, age, color)
+        { }
+        public void Talk()
+        {
+            Console.WriteLine("wof");
+        }
+
+      //13. Då kan vi lägga det under Bird, iomed att vi även har fåglar redan där. Annars får vi skapa en ny parent class och lägga det där. 
+      //14. Om vi ska göra fler djur eller liknade så är det bra att lägga det under animal då vi redan har det som parent och det e dumt att lägga till repeat kod. Såvidare vi inte ska skapa en ny klass som tex däggdjur och lägga allt där under.
+
+    }
 }
