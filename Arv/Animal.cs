@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Övningssamling___Inkapsling__arv_och_polymorfism
+namespace Arv
 {
     public abstract class Animal
     {

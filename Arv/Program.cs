@@ -1,4 +1,4 @@
-﻿using Övningssamling___Inkapsling__arv_och_polymorfism;
+﻿using Arv;
 using System.Drawing;
 
 namespace Arv
@@ -40,6 +40,7 @@ namespace Arv
                     IPerson personAnimal = (IPerson)animal; // Typomvandling till IPerson
                     personAnimal.Talk(); // Anropa Talk() metoden
                 }
+                Console.WriteLine($"Animal: {animal}");
                 Console.WriteLine($"Animal name: {animal.Name}");
                 Console.WriteLine($"Animal weight: {animal.Weight}");
                 Console.WriteLine($"Animal age: {animal.Age}");
