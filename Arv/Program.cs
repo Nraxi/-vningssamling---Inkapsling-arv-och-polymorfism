@@ -40,7 +40,8 @@ namespace Arv
                     IPerson personAnimal = (IPerson)animal; // Typomvandling till IPerson
                     personAnimal.Talk(); // Anropa Talk() metoden
                 }
-                Console.WriteLine($"Animal: {animal}");
+
+                Console.WriteLine($"Animal: {animal.GetType().Name}");
                 Console.WriteLine($"Animal name: {animal.Name}");
                 Console.WriteLine($"Animal weight: {animal.Weight}");
                 Console.WriteLine($"Animal age: {animal.Age}");
